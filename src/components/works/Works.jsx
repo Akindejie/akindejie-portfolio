@@ -57,10 +57,10 @@ export default function Works() {
     <div className="works" id="works">
       <div className="classicSlider">
         <Slider {...settings}>
-          {projects.map((slide, index) => (
+          {projects.map((d, index) => (
             <div key={index}>
-              <img src={slide.img} alt="slider" key={index} className="image" />
-              <span>{slide.name}</span>
+              <img src={d.img} alt="slider" key={index} className="image" />
+              <span>{d.name}</span>
             </div>
           ))}
         </Slider>
