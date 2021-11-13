@@ -39,14 +39,10 @@ export default function Testimonials() {
               <img
                 className="left"
                 src="assets/rightArrow.png"
-                alt="Left Testimonial Image"
+                alt="Left Testimonial"
               />
-              <img className="user" src={d.img} alt="User Testimonial Image" />
-              <img
-                className="right"
-                src={d.icon}
-                alt="Right Testimonial Image"
-              />
+              <img className="user" src={d.img} alt="User Testimonial" />
+              <img className="right" src={d.icon} alt="Right Testimonial" />
             </div>
             <div className="center">{d.desc}</div>
             <div className="bottom">
