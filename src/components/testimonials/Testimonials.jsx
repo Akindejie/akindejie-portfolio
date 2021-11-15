@@ -1,4 +1,5 @@
 import './testimonials.scss';
+import Zoom from 'react-reveal/Zoom';
 import {
   LinkedIn,
   ThreeDRotation,
@@ -43,22 +44,24 @@ export default function Testimonials() {
   return (
     <div className="testimonials" id="testimonials">
       <h1>Testimonials</h1>
-      <div className="container">
-        {data.map((d) => (
-          <div className={d.featured ? 'card featured' : 'card'} key={d.id}>
-            <div className="top">
-              <div className="left"> {d.leftIcon}</div>
-              <img src={d.img} alt="Testimonial" className="user" />
-              <div className="right"> {d.rightIcon}</div>
+      <Zoom left>
+        <div className="container">
+          {data.map((d) => (
+            <div className={d.featured ? 'card featured' : 'card'} key={d.id}>
+              <div className="top">
+                <div className="left"> {d.leftIcon}</div>
+                <img src={d.img} alt="Testimonial" className="user" />
+                <div className="right"> {d.rightIcon}</div>
+              </div>
+              <div className="center">{d.desc} </div>
+              <div className="bottom">
+                <h3>{d.name}</h3>
+                <h4>{d.title}</h4>
+              </div>
             </div>
-            <div className="center">{d.desc} </div>
-            <div className="bottom">
-              <h3>{d.name}</h3>
-              <h4>{d.title}</h4>
-            </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      </Zoom>
     </div>
   );
 }

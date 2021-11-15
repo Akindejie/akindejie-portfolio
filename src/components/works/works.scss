@@ -4,6 +4,11 @@
   height: calc(100vh - 70px);
   align-items: center;
 
+  @include mobile {
+    height: calc(100vh - 370px);
+    font-size: 20px;
+  }
+
   h1 {
     font-size: 50px;
     margin-top: 20px;
@@ -17,6 +22,11 @@
   .classicSlider {
     justify-content: center;
     margin: 20px 0px;
+
+    @include mobile {
+      margin-top: -50px;
+      font-size: 20px;
+    }
   }
   .slick-slider {
     position: relative;
@@ -60,6 +70,16 @@
         font-family: 'Arvo', serif;
         font-style: italic;
         font-weight: 600;
+
+        @include mobile {
+          margin-top: 2px;
+          font-size: 2px;
+          font-weight: 2;
+          text-align: center;
+          font-family: 'Arvo', serif;
+          font-style: italic;
+          overflow: hidden;
+        }
       }
     }
     .image {
@@ -100,13 +120,11 @@
       width: 450px;
       box-shadow: rgba(0, 0, 0, 0.69) 0px 2px 30px -20px,
         rgba(0, 0, 0, 0.73) 0px 7px 27px -9px;
+
+      @include mobile {
+        width: 150px;
+      }
     }
-  }
-  .slick-prev {
-    display: none !important;
-  }
-  .slick-next {
-    display: none !important;
   }
   .custom-prevArrow {
     position: relative;
@@ -126,34 +144,6 @@
     &:hover {
       fill: $sweetColor;
       cursor: pointer;
-    }
-  }
-
-  @media screen and (max-width: 580px) {
-    .slick-slide {
-      div {
-        div {
-          span {
-            display: none;
-          }
-        }
-      }
-    }
-    .slick-slide.slick-current {
-      div {
-        div {
-          span {
-            display: block;
-            margin-top: 10px;
-            width: inherit;
-            text-align: center;
-            font-family: 'Arvo', serif;
-            font-style: italic;
-            font-weight: 600;
-            color: #111;
-          }
-        }
-      }
     }
   }
 }

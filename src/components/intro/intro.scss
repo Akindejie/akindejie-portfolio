@@ -102,6 +102,10 @@
         margin-top: 40px;
         overflow: hidden;
 
+        @include mobile {
+          margin-bottom: 20px;
+        }
+
         .skills-wrapper {
           height: 100%;
           animation: move 10s ease-in-out infinite alternate;
@@ -130,6 +134,12 @@
             color: $sweetColor;
             display: flex;
             align-items: center;
+
+            @include mobile {
+              font-size: 20px;
+              font-weight: 700;
+              justify-content: center;
+            }
           }
         }
       }
