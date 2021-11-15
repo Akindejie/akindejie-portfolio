@@ -1,9 +1,10 @@
 $mainColor: #15023a;
+$sweetColor: #f84e70;
 
 $width: 768px;
 
 @mixin mobile {
-    @media (max-width: #{$width}){
-        @content
-    }
+  @media (max-width: #{$width}) {
+    @content;
+  }
 }

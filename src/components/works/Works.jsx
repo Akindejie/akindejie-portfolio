@@ -47,7 +47,7 @@ export default function Works() {
     infinite: true,
     centerPadding: '100px',
     slidesToShow: 3,
-    autoplay: false,
+    autoplay: true,
     speed: 500,
     nextArrow: <GalleryNextArrow />,
     prevArrow: <GalleryPrevArrow />,
@@ -55,12 +55,15 @@ export default function Works() {
 
   return (
     <div className="works" id="works">
+      <h1>Past Works</h1>
       <div className="classicSlider">
         <Slider {...settings}>
           {projects.map((d, index) => (
-            <div key={index}>
+            <div className="work-slide" key={index}>
               <img src={d.img} alt="slider" key={index} className="image" />
-              <span>{d.name}</span>
+              <a href={d.link} target="_blank" rel="noreferrer">
+                <span>{d.desc}</span>
+              </a>
             </div>
           ))}
         </Slider>

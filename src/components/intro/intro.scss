@@ -2,6 +2,7 @@
 
 .intro {
   display: flex;
+  height: calc(100vh - 70px);
 
   @include mobile {
     flex-direction: column;
@@ -15,7 +16,7 @@
     .imgContainer {
       width: 750px;
       height: 750px;
-      background-color: rgb(250, 142, 164);
+      background-color: $sweetColor;
       border-radius: 50%;
       display: flex;
       align-items: flex-end;
@@ -79,7 +80,7 @@
 
         span {
           font-size: inherit;
-          color: crimson;
+          color: $sweetColor;
         }
 
         .ityped-cursor {
@@ -95,21 +96,70 @@
           }
         }
       }
+
+      .skills {
+        height: 50px;
+        margin-top: 40px;
+        overflow: hidden;
+
+        .skills-wrapper {
+          height: 100%;
+          animation: move 10s ease-in-out infinite alternate;
+
+          @keyframes move {
+            20% {
+              transform: translateY(-50px);
+            }
+            40% {
+              transform: translateY(-150px);
+            }
+            60% {
+              transform: translateY(-100px);
+            }
+            80% {
+              transform: translateY(-250px);
+            }
+            100% {
+              transform: translateY(-200px);
+            }
+          }
+          .skills-item {
+            height: 50px;
+            font-size: 30px;
+            font-weight: bold;
+            color: $sweetColor;
+            display: flex;
+            align-items: center;
+          }
+        }
+      }
     }
 
     a {
+      cursor: pointer;
       position: absolute;
       bottom: 10px;
       left: 40%;
 
-      img {
-        width: 30px;
+      .arrow-down {
+        -webkit-transform: rotate(90deg) scale(2.1);
+        transform: rotate(90deg) scale(2.1);
         animation: arrowBlink 2s infinite;
       }
 
       @keyframes arrowBlink {
-        to {
-          opacity: 0;
+        0% {
+          opacity: 0.5;
+          color: black;
+        }
+
+        50% {
+          opacity: 0.5;
+          color: white;
+        }
+        100% {
+          opacity: 1;
+          color: $sweetColor;
         }
       }
     }

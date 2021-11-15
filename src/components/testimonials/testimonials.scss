@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: calc(100vh - 70px);
 
   @include mobile {
     justify-content: space-around;
@@ -65,14 +66,15 @@
         align-items: center;
         justify-content: center;
 
+        .left,
+        .right {
+          transform: scale(1.3);
+        }
+
         img {
-          &.left,
-          &.right {
-            height: 25px;
-          }
           &.user {
-            height: 60px;
-            width: 60px;
+            height: 100px;
+            width: 100px;
             border-radius: 50%;
             object-fit: cover;
             margin: 0 30px;
@@ -88,7 +90,7 @@
       .center {
         padding: 10px;
         border-radius: 10px;
-        border-color: rgb(247, 142, 161);
+        background-color: rgb(212, 201, 203);
 
         @include mobile {
           font-size: 12px;

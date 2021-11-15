@@ -1,6 +1,8 @@
 import './intro.scss';
 import { init } from 'ityped';
 import { useEffect, useRef } from 'react';
+import DoubleArrowIcon from '@mui/icons-material/DoubleArrow';
+import { Fade, Flip } from 'react-reveal';
 
 export default function Intro() {
   const textRef = useRef();
@@ -16,23 +18,38 @@ export default function Intro() {
 
   return (
     <div className="intro" id="intro">
-      <div className="left">
-        <div className="imgContainer">
-          <img src="assets/dejiCartoon.png" alt="Deji Cartoon" />
+      <Flip left>
+        <div className="left">
+          <div className="imgContainer">
+            <img src="assets/dejiCartoon.png" alt="Deji Cartoon" />
+          </div>
         </div>
-      </div>
-      <div className="right">
-        <div className="wrapper">
-          <h2>Hi There, I'm</h2>
-          <h1>Akindeji Lasisi</h1>
-          <h3>
-            Freelance <span ref={textRef} />
-          </h3>
+      </Flip>
+      <Fade bottom>
+        <div className="right">
+          <div className="wrapper">
+            <h2>Hi There, I'm</h2>
+            <h1>Akindeji Lasisi</h1>
+            <h3>
+              Freelance <span ref={textRef} />
+            </h3>
+            <div className="skills">
+              <div className="skills-wrapper">
+                <div className="skills-item">React</div>
+                <div className="skills-item">JavaScript</div>
+                <div className="skills-item">TypeScript</div>
+                <div className="skills-item">SASS</div>
+                <div className="skills-item">Node</div>
+                <div className="skills-item">Redux</div>
+                <div className="skills-item">Firebase</div>
+              </div>
+            </div>
+          </div>
+          <a href="#portfolio">
+            <DoubleArrowIcon className="arrow-down" />
+          </a>
         </div>
-        <a href="#portfolio">
-          <img src="assets/22Down.png" alt="Arrow down" />
-        </a>
-      </div>
+      </Fade>
     </div>
   );
 }

@@ -33,7 +33,6 @@ export default function Contact() {
 
   return (
     <div className="contact" id="contact">
-      <div className="bag"></div>
       <div className="wrapper">
         <div className="left">
           <h1 className="title">Let's discuss your project</h1>
@@ -101,6 +100,7 @@ export default function Contact() {
           </form>
         </div>
       </div>
+      <div className="signature">©2021 Fuadeen Akindeji Lasisi. akindejie®</div>
     </div>
   );
 }

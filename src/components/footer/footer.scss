@@ -1,0 +1,36 @@
+@import '../../global.scss';
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 100;
+
+  .container {
+    width: 50px;
+
+    .link-list {
+      display: block;
+
+      ul {
+        position: relative;
+        left: 0;
+        bottom: 0;
+        list-style-type: none;
+        margin-left: -15px;
+        margin-bottom: 30px;
+
+        li {
+          margin: 20px 0px;
+          a {
+            .disabled-link {
+              cursor: pointer;
+              pointer-events: none;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

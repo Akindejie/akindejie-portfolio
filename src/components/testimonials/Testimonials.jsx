@@ -1,31 +1,42 @@
 import './testimonials.scss';
+import {
+  LinkedIn,
+  ThreeDRotation,
+  Twitter,
+  Instagram,
+  ImportantDevices,
+  DevicesOther,
+} from '@mui/icons-material';
 
 export default function Testimonials() {
   const data = [
     {
       id: '1',
-      name: 'Black Night',
-      title: 'Senior Developer',
-      img: 'https://cdn.dribbble.com/users/3320958/screenshots/15212021/media/b273f408f8c1ad3d535fc34166256b18.png?compress=1&resize=1600x1200',
-      icon: './assets/rightArrow.png',
-      desc: 'Lorem do your duty 1',
+      name: 'Maximilian Mason',
+      title: 'Site Texting',
+      img: './assets/maximilian.jpg',
+      leftIcon: <DevicesOther />,
+      rightIcon: <Twitter />,
+      desc: 'It was really nice working with him, and i highly recommend him to anyone.',
     },
     {
       id: '2',
-      name: 'White Panther',
-      title: 'Web Developer',
-      img: 'https://cdn.dribbble.com/users/3320958/screenshots/15212021/media/b273f408f8c1ad3d535fc34166256b18.png?compress=1&resize=1600x1200',
-      icon: './assets/rightArrow.png',
-      desc: 'Lorem do your duty 2222',
+      name: 'Taiwo Ajibode',
+      title: 'Web Development',
+      img: './assets/taiwo.jpg',
+      leftIcon: <ImportantDevices />,
+      rightIcon: <LinkedIn />,
+      desc: 'I speak for Akindeji when I tell you how pleased we are with the web site he designed for us. The district needed a site that addressed varied aspects of our operation. He met those needs and then some more!!! ',
       featured: true,
     },
     {
       id: '3',
-      name: 'Super Man',
-      title: 'Mobile Developer',
-      img: 'https://cdn.dribbble.com/users/3320958/screenshots/15212021/media/b273f408f8c1ad3d535fc34166256b18.png?compress=1&resize=1600x1200',
-      icon: './assets/rightArrow.png',
-      desc: 'Lorem do your duty 333333333',
+      name: `Emma O'Kane`,
+      title: '3D Graphics',
+      img: './assets/emma.jpg',
+      leftIcon: <ThreeDRotation />,
+      rightIcon: <Instagram />,
+      desc: `I'm Emma, and I proactively offered, and wanted, to write a testimonial for Akindeji's artwork. Finding him on Instagram, I was so impressed with his original designs, I contacted him to bring my original design to life.`,
     },
   ];
 
@@ -36,15 +47,11 @@ export default function Testimonials() {
         {data.map((d) => (
           <div className={d.featured ? 'card featured' : 'card'} key={d.id}>
             <div className="top">
-              <img
-                className="left"
-                src="assets/rightArrow.png"
-                alt="Left Testimonial"
-              />
-              <img className="user" src={d.img} alt="User Testimonial" />
-              <img className="right" src={d.icon} alt="Right Testimonial" />
+              <div className="left"> {d.leftIcon}</div>
+              <img src={d.img} alt="Testimonial" className="user" />
+              <div className="right"> {d.rightIcon}</div>
             </div>
-            <div className="center">{d.desc}</div>
+            <div className="center">{d.desc} </div>
             <div className="bottom">
               <h3>{d.name}</h3>
               <h4>{d.title}</h4>

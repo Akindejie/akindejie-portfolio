@@ -2,7 +2,7 @@ export const featuredPortfolio = [
   {
     id: 1,
     title: 'Social Media App',
-    img: 'https://cdn.dribbble.com/users/2451688/screenshots/16741890/media/3dac01da98d75f2b66fc21f9c8cf8a6c.png?compress=1&resize=1600x1200',
+    img: 'https://cdn.dribbble.com/users/2244079/screenshots/6698820/take__board_dribbble_3.2--optimized.gif',
   },
   {
     id: 2,
@@ -35,7 +35,7 @@ export const webPortfolio = [
   {
     id: 1,
     title: 'Social Media App',
-    img: 'https://cdn.dribbble.com/users/2244079/screenshots/6698820/take__board_dribbble_3.2--optimized.gif',
+    img: 'https://cdn.dribbble.com/users/2451688/screenshots/16741890/media/3dac01da98d75f2b66fc21f9c8cf8a6c.png?compress=1&resize=1600x1200',
   },
   {
     id: 2,
@@ -44,7 +44,7 @@ export const webPortfolio = [
   },
   {
     id: 3,
-    title: 'E-commerce Web Design',
+    title: 'Web Design',
     img: 'https://cdn.dribbble.com/users/5963189/screenshots/16739490/media/3dbff9e0778ca7a9501822df9ad073c3.png?compress=1&resize=1600x1200',
   },
   {
@@ -77,7 +77,7 @@ export const mobilePortfolio = [
   },
   {
     id: 3,
-    title: 'E-commerce Web Design',
+    title: 'Web Design',
     img: 'https://cdn.dribbble.com/users/6060820/screenshots/15386433/media/0e6693f23ae05227e7cd83c1ca2bb548.png?compress=1&resize=1600x1200',
   },
   {
@@ -110,7 +110,7 @@ export const designPortfolio = [
   },
   {
     id: 3,
-    title: 'E-commerce Web Design',
+    title: 'Web Design',
     img: 'https://cdn.dribbble.com/users/2285628/screenshots/15405343/media/bb1f02d72cffbbc3a0f02ad4dd189611.png?compress=1&resize=1600x1200',
   },
   {

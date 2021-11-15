@@ -5,7 +5,7 @@ li {
   font-weight: 600;
   margin-right: 50px;
   padding: 5px;
-  border-radius: 70px;
+  border-radius: 14px;
   cursor: pointer;
 
   @include mobile {
@@ -15,8 +15,8 @@ li {
   }
 
   &.active {
-    transform: scale(1.6);
-    background-color: #fa8ea4;
+    transform: scale(1.3);
+    background-color: $sweetColor;
     color: white;
   }
 }

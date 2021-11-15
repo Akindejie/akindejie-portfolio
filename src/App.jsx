@@ -9,6 +9,7 @@ import Contact from './components/contact/Contact';
 import { useState } from 'react';
 import Menu from './components/menu/Menu';
 import { ThemeContext } from './context';
+import Footer from './components/footer/Footer';
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -31,6 +32,7 @@ function App() {
         <Works />
         <Testimonials />
         <Contact />
+        <Footer />
       </div>
     </div>
   );

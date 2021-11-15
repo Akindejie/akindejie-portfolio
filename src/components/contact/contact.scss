@@ -2,17 +2,12 @@
 
 .contact {
   position: relative;
+  height: calc(100vh - 70px);
 
   @include mobile {
     flex-direction: column;
   }
 
-  .bag {
-    width: 20px;
-    height: 100%;
-    background-color: rgb(2, 255, 116);
-    position: absolute;
-  }
   .wrapper {
     padding: 50px;
     display: flex;
@@ -83,13 +78,19 @@
 
         button {
           border: none;
+          border-radius: 20px;
           padding: 15px;
-          background-color: green;
+          background-color: $sweetColor;
           color: white;
           font-weight: 500;
           cursor: pointer;
         }
       }
     }
+  }
+  .signature {
+    margin-top: 10px;
+    margin-left: 40vw;
+    letter-spacing: 2px;
   }
 }
