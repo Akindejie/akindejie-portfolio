@@ -5,13 +5,35 @@ import { ThemeContext } from '../../context';
 
 export default function Contact() {
   const formRef = useRef();
-  const [message, setMessage] = useState(false);
+  const [done, setDone] = useState(false);
 
   const theme = useContext(ThemeContext);
   const darkMode = theme.state.darkMode;
 
+  const [name, setName] = useState();
+  const [subject, setSubject] = useState();
+  const [email, setEmail] = useState();
+  const [message, setMessage] = useState();
+
+  const handleNameInput = (e) => {
+    setName(e.target.value);
+  };
+  const handleSubjectNameInput = (e) => {
+    setSubject(e.target.value);
+  };
+  const handleEmailInput = (e) => {
+    setEmail(e.target.value);
+  };
+  const handleMessageInput = (e) => {
+    setMessage(e.target.value);
+  };
+
   const SendEmail = (e) => {
     e.preventDefault();
+    setName('');
+    setSubject('');
+    setEmail('');
+    setMessage('');
 
     emailjs
       .sendForm(
@@ -23,7 +45,7 @@ export default function Contact() {
       .then(
         (result) => {
           console.log(result.text);
-          setMessage(true);
+          setDone(true);
         },
         (error) => {
           console.log(error.text);
@@ -74,18 +96,24 @@ export default function Contact() {
               type="text"
               placeholder="Name"
               name="user_name"
+              value={name}
+              onChange={handleNameInput}
             />
             <input
               style={{ backgroundColor: darkMode && '#333' }}
               type="text"
               placeholder="Subject"
               name="user_subject"
+              value={subject}
+              onChange={handleSubjectNameInput}
             />
             <input
               style={{ backgroundColor: darkMode && '#333' }}
               type="text"
               placeholder="Email"
               name="user_email"
+              value={email}
+              onChange={handleEmailInput}
             />
             <textarea
               name="message"
@@ -94,9 +122,11 @@ export default function Contact() {
               rows="10"
               placeholder="Message"
               style={{ backgroundColor: darkMode && '#333' }}
+              value={message}
+              onChange={handleMessageInput}
             ></textarea>
-            <button>Submit</button>
-            {message && <span>`Thanks, I'll reply ASAP :)`</span>}
+            <button type="submit">Submit</button>
+            {done && <span>`Thanks, I'll reply ASAP :)`</span>}
           </form>
         </div>
       </div>

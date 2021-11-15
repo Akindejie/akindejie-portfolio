@@ -15,6 +15,7 @@
 
     @include mobile {
       font-size: 20px;
+      margin-bottom: 15px;
     }
   }
   .container {
@@ -69,6 +70,10 @@
         .left,
         .right {
           transform: scale(1.3);
+
+          @include mobile {
+            transform: scale(0.9);
+          }
         }
 
         img {
@@ -80,6 +85,7 @@
             margin: 0 30px;
 
             @include mobile {
+              margin-bottom: 10px;
               width: 30px;
               height: 30px;
             }
@@ -94,6 +100,7 @@
 
         @include mobile {
           font-size: 12px;
+          background-color: $sweetColor;
           padding: 5px;
         }
       }

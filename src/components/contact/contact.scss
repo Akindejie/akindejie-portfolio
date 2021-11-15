@@ -6,17 +6,35 @@
 
   @include mobile {
     flex-direction: column;
+    align-items: center;
   }
 
   .wrapper {
     padding: 50px;
     display: flex;
+
+    @include mobile {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
     .left {
       flex: 1;
+
       .title {
         font-size: 60px;
         width: 80%;
+
+        @include mobile {
+          margin-top: 30px;
+          font-size: 20px;
+          width: 100%;
+          align-items: center;
+          justify-content: center;
+        }
       }
+
       .info {
         .info-item {
           display: flex;
@@ -24,21 +42,27 @@
           margin: 50px 0px;
           width: 70%;
 
+          @include mobile {
+            margin: 20px 0px;
+            width: 100%;
+            font-size: small;
+          }
+
           .phone-icon {
-            width: 15%;
-            height: 15%;
+            width: 9%;
+            height: 9%;
             margin-right: 20px;
           }
 
           .email-icon {
-            width: 15%;
-            height: 16%;
+            width: 10%;
+            height: 12%;
             margin-right: 20px;
           }
 
           .home-icon {
-            width: 14%;
-            height: 12%;
+            width: 10%;
+            height: 6%;
             margin-right: 20px;
           }
         }
@@ -54,10 +78,21 @@
 
       p {
         font-weight: 600;
+
+        @include mobile {
+          font-weight: 410;
+          margin-top: 20px;
+          align-items: center;
+          justify-content: center;
+        }
       }
 
       form {
         margin-top: 20px;
+
+        @include mobile {
+          margin-top: 5px;
+        }
 
         input {
           width: 50%;
@@ -84,13 +119,23 @@
           color: white;
           font-weight: 500;
           cursor: pointer;
+
+          @include mobile {
+            padding: 6;
+          }
         }
       }
     }
   }
   .signature {
     margin-top: 10px;
-    margin-left: 40vw;
+    margin-left: 38vw;
     letter-spacing: 2px;
+
+    @include mobile {
+      width: 100vh;
+      margin-left: 7vw;
+      font-size: 12px;
+    }
   }
 }
