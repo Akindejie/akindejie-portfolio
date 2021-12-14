@@ -112,16 +112,68 @@
         }
 
         button {
-          border: none;
-          border-radius: 20px;
-          padding: 15px;
-          background-color: $sweetColor;
-          color: white;
-          font-weight: 500;
+          font-size: 1.3rem;
+          font-weight: bold;
+          display: inline-block;
           cursor: pointer;
+          text-decoration: none;
+          color: $sweetColor;
+          border: $sweetColor 0.125em solid;
+          padding: 0.25em 1em;
+          border-radius: 0.85em;
+          text-shadow: 0 0 0.125em #ffffff4d, 0 0 0.45em currentColor;
+          box-shadow: inset 0 0 0.5em 0 $sweetColor, 0 0 0.5em 0 $sweetColor;
+          position: relative;
 
           @include mobile {
-            padding: 6;
+            font-size: 1rem;
+          }
+
+          &::before {
+            pointer-events: none;
+            content: '';
+            position: absolute;
+            background: $sweetColor;
+            top: 90%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
+            filter: blur(1em);
+            opacity: 0.7;
+          }
+          &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            box-shadow: 0 0 2em 0.5em $sweetColor;
+            opacity: 0;
+            background-color: $sweetColor;
+            z-index: -1;
+            transition: opacity 100ms linear;
+          }
+          &:hover {
+            color: $mainColor;
+            text-shadow: none;
+            &::before {
+              opacity: 1;
+            }
+            &::after {
+              opacity: 1;
+            }
+          }
+          &:focus {
+            color: $mainColor;
+            text-shadow: none;
+            &::before {
+              opacity: 1;
+            }
+            &::after {
+              opacity: 1;
+            }
           }
         }
       }
